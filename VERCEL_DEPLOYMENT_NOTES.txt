@@ -1,0 +1,14 @@
+JOLODHAR - Vercel deployment package
+
+1. Extract this ZIP so app.py, requirements.txt and vercel.json are at the repository root.
+2. Commit/push the complete extracted project to GitHub.
+3. Import that repository into Vercel and deploy.
+4. Set ADMIN_USERNAME, ADMIN_PASSWORD and SECRET_KEY in Vercel Environment Variables.
+5. The serverless SQLite database and generated Mendeley sample files use /tmp on Vercel.
+   /tmp is ephemeral and is not persistent across cold starts. Use a managed database for
+   durable production data.
+6. Vercel does not run the persistent simulated-IoT background thread. The local run
+   (python app.py) retains the original background simulation.
+
+The package includes the expected Python package directories (data/, services/, ml/),
+Flask templates (templates/), static assets (static/), and model artifacts.
