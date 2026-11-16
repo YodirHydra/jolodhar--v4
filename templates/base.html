@@ -30,7 +30,7 @@
                     <span data-i18n="nav_public">Public View</span>
                 </a>
                 {% if is_admin %}
-                <a href="{{ url_for('control_dashboard') }}" class="nav-link {{ 'active' if 'control' in request.endpoint else '' }}">
+                <a href="{{ url_for('control_dashboard') }}" class="nav-link {{ 'active' if 'control' in (request.endpoint or '') else '' }}">
                     <i class="fas fa-cog"></i>
                     <span data-i18n="nav_control">Control Panel</span>
                 </a>
